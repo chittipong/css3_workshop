@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS3 Animation</title>
+<style>
+.textWithBlurBg{
+	width: 300px;
+	height: 200px;
+	display: inline-block;
+	margin: 4px;
+	position: relative;
+}
+
+.textWithBlurBg img{
+	width: 100%;
+	height: 100%;
+}
+
+.textWithBlurBg:hover img{
+	filter: blur(2px);
+}
+
+.textWithBlurBg :not(img){
+	position: absolute;
+	top: 30%;
+	z-index: 1;
+	color: #fff;
+	text-align: center;
+	width: 100%;
+}
+.textWithBlurBg h3{
+	top:50%;
+}
+</style>
+</head>
+<body>
+
+<div class="textWithBlurBg">
+	<img src="images/cruisym10.jpg">
+	<h2>SYM</h2>
+	<h3>Cruisym 300</h3>
+</div>
+
+<div class="textWithBlurBg">
+	<img src="images/cruisym11.jpg">
+	<h2>SYM</h2>
+	<h3>Cruisym 300</h3>
+</div>
+
+
+</body>
+</html>

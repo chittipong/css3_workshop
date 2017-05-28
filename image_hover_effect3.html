@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS3 Animation</title>
+<style>
+.textOverImage{
+	position: relative;
+	width: 300px;
+	height:300px;
+	float: left;
+	margin: 4px;
+	background-size: 100%;
+	background-position: center;
+	transition: 0.5s;
+}
+.textOverImage:hover{
+	background-size: 110%;
+}
+.textOverImage:after{
+	position: absolute;
+	top: 100%;
+	bottom: 0;
+	left:0;
+	right: 0;
+	word-wrap: break-word;
+	overflow: hidden;
+	background-color: rgba(0,0,0,0.6);
+	color: #fff;
+	padding: 0 8px;
+	opacity: 0;
+	content:attr(data-text);
+	transition: 0.5s;
+}
+
+.textOverImage:hover:after{
+	opacity: 1;
+	top: 0;
+	padding: 8px;
+}
+</style>
+</head>
+<body>
+
+<div class="textOverImage" style="background-image: url(images/cruisym10.jpg)" data-text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."></div>
+
+
+<div class="textOverImage" style="background-image: url(images/cruisym11.jpg)" data-text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."></div>
+
+
+</body>
+</html>
